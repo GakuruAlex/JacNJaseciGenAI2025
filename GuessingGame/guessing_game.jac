@@ -1,4 +1,4 @@
-import random;
+import from random { randint }
 
 
 obj Game {
@@ -14,9 +14,9 @@ obj GuessingGame(Game) {
     has has_won: bool = False,
         user_guess: int = 0,
         num_guesses: int = 0,
-        correct_number: int = random.randint(0, 100);
+        correct_number: int = randint(0, 100);
 
-    def play {
+    def play -> None {
         print(
             "I am thinking of a number between 0 and 100. Try to guess it in as few guesses as you can. "
         );
@@ -43,15 +43,15 @@ obj GuessingGame(Game) {
         }
     }
 
-    def get_user_guess {
+    def get_user_guess -> str {
         return input("What is your guess ? ");
     }
 
-    def is_user_guess_correct {
+    def is_user_guess_correct -> bool {
         return self.correct_number == self.user_guess;
     }
 
-    def guess_low_or_high {
+    def guess_low_or_high -> str {
         return "Your guess is too high."
         if self.user_guess > self.correct_number
         else "Your guess is too low.";
