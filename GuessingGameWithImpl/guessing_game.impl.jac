@@ -9,6 +9,7 @@ impl Game.play{
 impl GuessingGame.init{
     self.num_attempts = 0;
     self.has_won = False;
+    self.correct_number = randint(0, 100);
 }
 
 

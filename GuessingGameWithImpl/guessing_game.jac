@@ -10,7 +10,7 @@ obj Game {
 
 
 obj GuessingGame(Game) {
-    has correct_number: int = randint(0, 100);
+    has correct_number: int;
 
     def init;
     override def play;
