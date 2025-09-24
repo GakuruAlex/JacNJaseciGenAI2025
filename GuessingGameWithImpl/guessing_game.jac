@@ -2,15 +2,15 @@ import from random { randint }
 
 
 obj Game {
-    has num_attempts: int = 0,
-        has_won: bool = False;
+    has num_attempts: int,
+        has_won: bool;
 
     def play;
 }
 
 
 obj GuessingGame(Game) {
-    has correct_number: int = randint(0, 100);
+    has correct_number: int;
 
     def init;
     override def play;
@@ -19,8 +19,8 @@ obj GuessingGame(Game) {
     def get_user_guess;
 }
 
-with entry{
-    game = GuessingGame();
-    game.play()
 
+with entry {
+    game = GuessingGame();
+    game.play();
 }
