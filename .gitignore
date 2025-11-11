@@ -1,1 +1,5 @@
 .env
+*.pyc
+*.jir
+
+DocStrGenius/outputs/
